@@ -411,3 +411,182 @@ print("Best fitness:", best_fitness)
 ```
 
 Note: The code provided above is a template for a quantum-inspired optimization algorithm. You will need to implement the specific update rules and fitness evaluation for your combinatorial optimization problem.
+
+Quantum Circuit for Grover's Algorithm:
+
+Grover's algorithm is a quantum search algorithm that can efficiently find a specific item in an unsorted database with a quadratic speedup compared to classical algorithms. Here's the quantum circuit diagram and the corresponding code implementation for Grover's algorithm:
+
+Quantum Circuit Diagram:
+```
+                   ┌───┐┌────────────┐┌────────────┐┌────────────┐
+       q0: ────────┤ H ├┤0           ├┤0           ├┤0           ├
+                   ├───┤│            ││            ││            │
+       q1: ────────┤ H ├┤1           ├┤1           ├┤1           ├
+                   ├───┤│            ││            ││            │
+       q2: ────────┤ H ├┤2           ├┤2           ├┤2           ├
+                   ├───┤│            ││            ││            │
+       q3: ────────┤ H ├┤3           ├┤3           ├┤3           ├
+                   ├───┤│            ││            ││            │
+       q4: ────────┤ H ├┤4           ├┤4           ├┤4           ├
+                   ├───┤│            ││            ││            │
+       q5: ────────┤ H ├┤5           ├┤5           ├┤5           ├
+                   ├───┤│            ││            ││            │
+       q6: ────────┤ H ├┤6           ├┤6           ├┤6           ├
+                   ├───┤│            ││            ││            │
+       q7: ────────┤ H ├┤7           ├┤7           ├┤7           ├
+                   ├───┤│            ││            ││            │
+       q8: ────────┤ H ├┤8           ├┤8           ├┤8           ├
+                   ├───┤│            ││            ││            │
+       q9: ────────┤ H ├┤9           ├┤9           ├┤9           ├
+                   ├───┤│            ││            ││            │
+      q10: ────────┤ H ├┤10          ├┤10          ├┤10          ├
+                   ├───┤│            ││            ││            │
+      q11: ────────┤ H ├┤11          ├┤11          ├┤11          ├
+                   ├───┤│            ││            ││            │
+      q12: ────────┤ H ├┤12          ├┤12          ├┤12          ├
+                   ├───┤│            ││            ││            │
+      q13: ────────┤ H ├┤13          ├┤13          ├┤13          ├
+                   ├───┤│            ││            ││            │
+      q14: ────────┤ H ├┤14          ├┤14          ├┤14          ├
+                   ├───┤│            ││            ││            │
+      q15: ────────┤ H ├┤15          ├┤15          ├┤15          ├
+                   ├───┤│            ││            ││            │
+      q16: ────────┤ H ├┤16          ├┤16          ├┤16          ├
+                   ├───┤│            ││            ││            │
+      q17: ────────┤ H ├┤17          ├┤17          ├┤17          ├
+                   ├───┤│            ││            ││            │
+      q18: ────────┤ H ├┤18          ├┤18          ├┤18          ├
+                   ├───┤│            ││            ││            │
+      q19: ────────┤ H ├┤19          ├┤19          ├┤19          ├
+                   ├───┤│            ││            ││            │
+      q20: ────────┤ H ├┤20          ├┤20          ├┤20          ├
+                   ├───┤│            ││            ││            │
+      q21: ────────┤ H ├┤21          ├┤21          ├┤21          ├
+                   ├───┤│            ││            ││            │
+      q22: ────────┤ H ├┤22          ├┤22          ├┤22          ├
+                   ├───┤│            ││            ││            │
+      q23: ────────┤ H ├┤23          ├┤23          ├┤23          ├
+                   ├───┤│            ││            ││            │
+      q24: ────────┤ H ├┤24          ├┤24          ├┤24          ├
+                   ├───┤│            ││            ││            │
+      q25: ────────┤ H ├┤25          ├┤25          ├┤25          ├
+                   ├───┤│            ││            ││            │
+      q26: ────────┤ H ├┤26          ├┤26          ├┤26          ├
+                   ├───┤│            ││            ││            │
+      q27: ────────┤ H ├┤27          ├┤27          ├┤27          ├
+                   ├───┤│            ││            ││            │
+      q28: ────────┤ H ├┤28          ├┤28          ├┤28          ├
+                   ├───┤│            ││            ││            │
+      q29: ────────┤ H ├┤29          ├┤29          ├┤29          ├
+                   ├───┤│            ││            ││            │
+      q30: ────────┤ H ├┤30          ├┤30          ├┤30          ├
+                   ├───┤│            ││            ││            │
+      q31: ────────┤ H ├┤31          ├┤31          ├┤31          ├
+                   ├───┤│            ││            ││            │
+ancilla: ──────────┤ H ├┤32          ├┤32          ├┤32          ├
+                   ├───┤│            ││            ││            │
+       c0: 32/═════╡ M ╞════════════╡            ╞════════════╡
+                   ├───┤│            ││            ││            │
+       c1: 32/═════╡ M ╞════════════╡            ╞════════════╡
+                   ├───┤│            ││            ││            │
+       c2: 32/═════╡ M ╞════════════╡            ╞════════════╡
+                   ├───┤│            ││            ││            │
+       c3: 32/═════╡ M ╞════════════╡            ╞════════════╡
+                   ├───┤│            ││            ││            │
+       c4: 32/═════╡ M ╞════════════╡            ╞════════════╡
+                   ├───┤│            ││            ││            │
+       c5: 32/═════╡ M ╞════════════╡            ╞════════════╡
+                   ├───┤│            ││            ││            │
+       c6: 32/═════╡ M ╞════════════╡            ╞════════════╡
+                   ├───┤│            ││            ││            │
+       c7: 32/═════╡ M ╞════════════╡            ╞════════════╡
+                   ├───┤│            ││            ││            │
+       c8: 32/═════╡ M ╞════════════╡            ╞════════════╡
+                   ├───┤│            ││            ││            │
+       c9: 32/═════╡ M ╞════════════╡            ╞════════════╡
+                   ├───┤│            ││            ││            │
+      c10: 32/═════╡ M ╞════════════╡            ╞════════════╡
+                   ├───┤│            ││            ││            │
+      c11: 32/═════╡ M ╞════════════╡            ╞════════════╡
+                   ├───┤│            ││            ││            │
+      c12: 32/═════╡ M ╞════════════╡            ╞════════════╡
+                   ├───┤│            ││            ││            │
+      c13: 32/═════╡ M ╞════════════╡            ╞════════════╡
+                   ├───┤│            ││            ││            │
+      c14: 32/═════╡ M ╞════════════╡            ╞════════════╡
+                   ├───┤│            ││            ││            │
+      c15: 32/═════╡ M ╞════════════╡            ╞════════════╡
+                   ├───┤│            ││            ││            │
+      c16: 32/═════╡ M ╞════════════╡            ╞════════════╡
+                   ├───┤│            ││            ││            │
+      c17: 32/═════╡ M ╞════════════╡            ╞════════════╡
+                   ├───┤│            ││            ││            │
+      c18: 32/═════╡ M ╞════════════╡            ╞════════════╡
+                   ├───┤│            ││            ││            │
+      c19: 32/═════╡ M ╞════════════╡            ╞════════════╡
+                   └───┘└────────────┘└────────────┘└────────────┘
+```
+
+Code Implementation:
+```python
+import numpy as np
+from qiskit import QuantumCircuit, Aer, execute
+
+def grover_search(n, marked):
+    # Create a quantum circuit on n qubits
+    circuit = QuantumCircuit(n, n)
+
+    # Apply Hadamard gates to all qubits
+    circuit.h(range(n))
+
+    # Apply the Oracle
+    marked_oracle(circuit, marked)
+
+    # Apply the Diffusion Operator
+    diffusion_operator(circuit)
+
+    # Measure all qubits
+    circuit.measure(range(n), range(n))
+
+    return circuit
+
+def marked_oracle(circuit, marked):
+    # Apply X gate to the marked state
+    for state in marked:
+        circuit.x(state)
+
+    # Apply multi-controlled Z gate
+    circuit.h(marked[-1])
+    circuit.mct(marked[:-1], marked[-1])
+    circuit.h(marked[-1])
+
+    # Apply X gate to the marked state again
+    for state in marked:
+        circuit.x(state)
+
+def diffusion_operator(circuit):
+    # Apply Hadamard gates to all qubits
+    circuit.h(range(n))
+
+    # Apply X gates to all qubits
+    circuit.x(range(n))
+
+    # Apply multi-controlled Z gate
+    circuit.h(n-1)
+    circuit.mct(list(range(n-1)), n-1)
+    circuit.h(n-1)
+
+    # Apply X gates to all qubits
+    circuit.x(range(n))
+
+    # Apply Hadamard gates to all qubits
+    circuit.h(range(n))
+
+# Define the number of qubits and the marked states
+n = 5
+marked = [0, 1, 2, 3]
+
+# Create the Grover's circuit
+grover_circuit = grover_search(n, marked)
+
+# Simulate the circuit using the Qiskit
