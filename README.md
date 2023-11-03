@@ -412,7 +412,7 @@ print("Best fitness:", best_fitness)
 
 Note: The code provided above is a template for a quantum-inspired optimization algorithm. You will need to implement the specific update rules and fitness evaluation for your combinatorial optimization problem.
 
-Quantum Circuit for Grover's Algorithm:
+# Quantum Circuit for Grover's Algorithm:
 
 Grover's algorithm is a quantum search algorithm that can efficiently find a specific item in an unsorted database with a quadratic speedup compared to classical algorithms. Here's the quantum circuit diagram and the corresponding code implementation for Grover's algorithm:
 
