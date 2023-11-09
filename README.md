@@ -64,6 +64,65 @@ QuantumRealityArchitect aims to address several challenges and advance solutions
 
 QuantumRealityArchitect seeks to confront these challenges, fostering advancements that push the boundaries of technology, ethics, and creativity within the realm of simulated quantum realities.
 
+# Contributor Guide 
+
+## QuantumRealityArchitect GitHub Repository Contributor Guide
+
+### Welcome Contributors!
+
+Thank you for your interest in contributing to QuantumRealityArchitect. Your input is valuable in shaping the future of quantum-level simulated realities.
+
+### Code of Conduct
+
+Before contributing, please review and adhere to our [Code of Conduct](link-to-code-of-conduct), ensuring a respectful and inclusive environment for all contributors.
+
+### Getting Started
+
+#### Prerequisites
+- Install the latest version of [Python](link-to-python) and [Node.js](link-to-nodejs)
+- Familiarity with Git and GitHub
+- Quantum computing and AI knowledge is a plus
+
+#### Installation
+1. Fork the repository to your GitHub account.
+2. Clone the forked repository to your local machine.
+3. Set up the required environment by following the provided instructions in the README file.
+
+#### Branching and Commits
+- Create a new branch for each feature or fix you're working on.
+- Use descriptive and concise commit messages, following our commit message conventions.
+
+#### Pull Requests
+1. Ensure your code adheres to our coding standards.
+2. Document any significant changes in the codebase.
+3. Create a pull request, detailing the purpose and scope of your changes.
+
+### Guidelines
+
+#### Coding Standards
+- Follow the provided style guide for consistency.
+- Write clean, readable, and well-documented code.
+
+#### Testing
+- Write test cases for new features and ensure existing tests pass.
+- Test your changes thoroughly before creating a pull request.
+
+#### Documentation
+- Update relevant documentation for new features or changes.
+- Provide clear and comprehensive explanations for added functionalities.
+
+#### Communication
+- Engage in respectful and constructive discussions on GitHub issues and pull requests.
+- Seek assistance or clarification when needed.
+
+### Recognition
+We value and recognize contributors for their efforts. Your contributions will be acknowledged in the repository.
+
+### Contact
+If you have any questions or need assistance, feel free to reach out to us at [support@quantumrealityarchitect.com].
+
+Thank you for considering contributing to QuantumRealityArchitect!
+
 # Guide 
 
 ```python
