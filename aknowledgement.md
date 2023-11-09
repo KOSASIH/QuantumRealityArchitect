@@ -16,6 +16,6 @@ QuantumRealityArchitect extends its deep appreciation to all those who have cont
 
 09 November 2023 
 
-KOSASIH 
+[KOSASIH](https://www.linkedin.com/in/kosasih-81b46b5a) 
 
 Creator Of QuantumRealityArchitect
