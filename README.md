@@ -10,7 +10,7 @@ Architecting realities at the quantum level, exploring the frontiers of AI's cre
 - [Contributor Guide](#contributor-guide)
 - [Guide](#guide)
 - [Roadmap](#roadmap)
-- [Aknowledgement](#aknowledgement)
+- [Aknowledgement](aknowledgement.md)
 
 # Description 
 
