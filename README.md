@@ -74,7 +74,7 @@ Thank you for your interest in contributing to QuantumRealityArchitect. Your inp
 
 ### Code of Conduct
 
-Before contributing, please review and adhere to our [Code of Conduct](link-to-code-of-conduct), ensuring a respectful and inclusive environment for all contributors.
+Before contributing, please review and adhere to our [Code of Conduct](CODE-OF-CONDUCT.md), ensuring a respectful and inclusive environment for all contributors.
 
 ### Getting Started
 
